@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+
+    <!-- Light theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ded9e1</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bgColorMain">#fcfcfc</item>
+        <item name="bgColorCard">#ffffff</item>
+        <item name="tintColor">#000000</item>
+        <item name="buttonColor">@color/colorAccent</item>
+        <item name="textColor">#000000</item>
+        <item name="titleTextColor">#000000</item>
+        <item name="isLightTheme">true</item>
+        <item name="android:windowBackground">@color/windowLight</item>
+    </style>
+
+    <!-- Dark theme -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#6f1392</item>
+        <item name="colorPrimaryDark">#40097c</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bgColorMain">#6f1392</item>
+        <item name="bgColorCard">#6f1392</item>
+        <item name="tintColor">#ffffff</item>
+        <item name="buttonColor">@color/colorAccent</item>
+        <item name="textColor">#ffffff</item>
+        <item name="titleTextColor">#ffffff</item>
+        <item name="android:windowBackground">@color/windowDark</item>
+    </style>
+
+</resources>
