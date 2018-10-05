@@ -14,9 +14,13 @@ public class MainActivity extends AppCompatActivity {
     private Switch action_theme;
     private MenuItem toggle_theme;
 
+    private ApplicationState state;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+        state = new ApplicationState(this);
+
+        if(state.getThemeState()) {
             setTheme(R.style.AppThemeDark);
         } else {
             setTheme(R.style.AppTheme);
@@ -32,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         toggle_theme = menu.findItem(R.id.toggle_theme);
         action_theme = (Switch) toggle_theme.getActionView();
 
-        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+        if(state.getThemeState()) {
             action_theme.setChecked(true);
         }
 
@@ -40,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    state.setThemeState(true);
                     reboot();
                 } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    state.setThemeState(false);
                     reboot();
                 }
             }

@@ -36,7 +36,7 @@
             android:layout_marginTop="16dp"
             android:textColor="?attr/textColor"
             android:textStyle="italic"
-            android:text="Photo by Vincentiu Solomon on Unsplash"
+            android:text="Taken with Firefox screenshot."
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
